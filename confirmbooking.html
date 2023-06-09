@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon linkup -->
+    <link rel="shortcut icon" href="./images/car.png" type="image/x-icon" />
+
+    <!-- document title -->
+    <title>Confirm Booking - Finest Car Washing</title>
+
+    <!-- Google fonts linkup -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Bootstrap Linkup -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <!-- css linkup -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <!-- TopBar -->
+      <div
+        class="topbar bg-white d-flex justify-content-between align-items-center ps-5 pe-5"
+      >
+        <div class="text-start">
+          <p>99 University Drive, Ottawa, K4K0A9</p>
+        </div>
+        <div class="text-center">
+          <p>Open Everyday: 9am-5pm</p>
+        </div>
+        <div class="text-end">
+          <p>Call Us: 613-888-8888</p>
+        </div>
+      </div>
+
+      <!-- navbar -->
+      <div class="navbar ps-5 pe-5">
+        <div
+          class="container-fluid d-flex justify-content-between align-items-center p-0"
+        >
+          <!-- left side -->
+          <div class="nav_left">
+            <span class="logo">
+              <a href="./index.html" class="fs-2"
+                >Finest<span class="text-white">Car</span>Wash</a
+              >
+            </span>
+          </div>
+          <!-- right side -->
+          <div class="nav_right">
+            <ul class="d-flex align-items-center gutter-6">
+              <li class="ms-4">
+                <a
+                  href="./index.html"
+                  class="text-white fw-semibold fs-6 position-relative"
+                  >Home</a
+                >
+              </li>
+              <li class="ms-4">
+                <a
+                  href="./services.html"
+                  class="text-white fw-semibold fs-6 position-relative"
+                  >Services
+                </a>
+              </li>
+              <li class="ms-4">
+                <a
+                  href="./cleaners.html"
+                  class="text-white fw-semibold fs-6 position-relative"
+                  >Our Cleaners</a
+                >
+              </li>
+              <li class="ms-4">
+                <a
+                  href="./business-info.html"
+                  class="text-white fw-semibold fs-6 position-relative"
+                  >Business Info</a
+                >
+              </li>
+              <li class="ms-4">
+                <a
+                  href="./booknow.html"
+                  class="text-white fw-semibold fs-6 position-relative"
+                  >Book Now</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="confirm_booking">
+      <!-- title -->
+      <div class="section_heading">
+        <h1 class="section_title text-center" id="updated_title">
+          No Booking Found!
+        </h1>
+      </div>
+
+      <!-- container start -->
+      <div class="container">
+        <div class="cb_content_container d-flex justify-content-between">
+          <div class="row">
+            <!-- left side -->
+            <div class="cb_left col-md-6">
+              <!-- desc -->
+              <div class="cb_desc">
+                <p class="mb-4 fs-6">
+                  Your wash has been confirmed. You should receive a copy of
+                  this confirmation in your email within the next 24 hours.
+                </p>
+              </div>
+
+              <!-- heading -->
+              <h1 class="bookinginfo_heading fs-2 mt-4 mb-4">Booking Info:</h1>
+
+              <!-- booking details -->
+              <div class="booking_details">
+                <!-- Name -->
+                <p class="mb-2 fs-6">
+                  Customer Name: <span id="customer_name"></span>
+                </p>
+
+                <!-- Phone -->
+                <p class="mb-2 fs-6">
+                  Phone Number: <span id="customer_number"></span>
+                </p>
+
+                <!-- Email -->
+                <p class="mb-2 fs-6">
+                  Email: <span id="customer_email"></span>
+                </p>
+
+                <!-- Date -->
+                <p class="mb-2 fs-6">Date: <span id="cleaning_date"></span></p>
+
+                <!-- Time -->
+                <p class="mb-2 fs-6">Time: <span id="cleaning_time"></span></p>
+
+                <!-- cleaner -->
+                <p class="mb-2 fs-6">
+                  Cleaner: <span id="choosed_cleaner"></span>
+                </p>
+
+                <!-- cleaner -->
+                <p class="mb-2 fs-6">
+                  Service: <span id="choosed_service"></span>
+                </p>
+              </div>
+            </div>
+
+            <!-- right side -->
+            <div class="cb_right col-md-6">
+              <img src="./images/thumbs-up.jpg" alt="thumbs-up" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- container end -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <span class="logo">
+        <a href="./index.html" class="fs-2"
+          >Finest<span class="text-white">Car</span>Wash</a
+        >
+      </span>
+
+      <div
+        class="social_links d-flex justify-content-between align-items-center"
+      >
+        <div
+          class="bg-white me-3 d-flex justify-content-center rounded-circle align-items-center w-full"
+        >
+          <a href="#">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </div>
+
+        <div
+          class="bg-white me-3 d-flex justify-content-center rounded-circle align-items-center w-full"
+        >
+          <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+
+        <div
+          class="bg-white me-3 d-flex justify-content-center rounded-circle align-items-center w-full"
+        >
+          <a href="#">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+
+      <p class="text-white">&copy; 2023, Finest Car Wash All right reserved.</p>
+    </footer>
+
+    <!-- Js file linkup -->
+    <script src="./js/app.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="./js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,463 @@
+/* 
+================================
+Css Variables
+================================
+*/
+:root {
+  --theme-bg: #0f172a;
+  --theme-color: #ff5200;
+  --section-bg: #f3f3f3;
+  --theme-boxShadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --theme-borderRadius: 25px;
+}
+
+/* 
+================================
+Basic Css Reseting
+================================
+*/
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+================================
+ Reusable Css Classes
+================================
+*/
+
+.active-page {
+  color: var(--theme-color) !important;
+}
+
+.underline-text {
+  text-decoration: underline;
+  text-underline-offset: 12px;
+  color: var(--theme-color);
+}
+
+.section_title {
+  font-size: 45px;
+  color: var(--theme-color);
+  font-weight: 600;
+}
+
+.button_container {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border: 2px solid var(--theme-bg);
+  border-radius: 6px;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--theme-bg);
+  color: #fff;
+}
+
+/* Navbar Css */
+.topbar {
+  height: 40px;
+}
+
+.topbar p {
+  font-weight: 500;
+  color: var(--theme-bg);
+}
+
+.navbar {
+  background: var(--theme-bg);
+  height: 80px;
+}
+
+.logo {
+  color: var(--theme-color);
+  font-family: "Pacifico", cursive;
+}
+
+.nav_right ul li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav_right ul li a:hover::before {
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  background-color: var(--theme-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.social_links div {
+  color: var(--theme-bg);
+  font-size: 18px;
+  width: 30px;
+  height: 30px;
+}
+
+footer p {
+  font-size: 13px;
+}
+
+/* 
+================================
+Home Page Css Start
+================================
+*/
+
+.banner {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../images/banner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header_title {
+  font-size: 70px;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* 
+================================
+Services Page Css Start
+================================
+*/
+
+#services {
+  background-color: var(--section-bg);
+  padding: 3% 0;
+}
+
+.service_content_container {
+  margin: 80px 0;
+}
+
+.service_card {
+  border-radius: var(--theme-borderRadius);
+  box-shadow: var(--theme-boxShadow);
+  transition: all 0.3s ease-in-out;
+}
+
+.sc_heading {
+  font-weight: 600;
+}
+
+.sc_image img {
+  height: 250px;
+  border-radius: 20px;
+  margin: 30px 0;
+  transition: all 0.4s ease;
+}
+
+.sc_image img:hover {
+  scale: 1.02;
+}
+
+.sc_subheading {
+  font-weight: 600;
+  /* font-size: 20px; */
+}
+
+.sc_desc p {
+  color: var(--theme-color);
+  font-weight: 500;
+}
+
+.sc_pricing p {
+  font-weight: 600;
+}
+
+.sc_pricing p span {
+  color: var(--theme-color);
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.tax {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+#services .btn {
+  background-color: var(--theme-color);
+  border: 1px solid var(--theme-color);
+}
+
+/* 
+================================
+Business Info Page Css Start
+================================
+*/
+
+#business_info {
+  background-color: var(--section-bg);
+  padding: 3% 0;
+}
+
+.bi_left img {
+  border-radius: var(--theme-borderRadius);
+  min-height: 600px;
+}
+
+.bi_right h2 {
+  color: var(--theme-color);
+  font-weight: 600;
+}
+
+.bi_right p span {
+  color: var(--theme-color);
+  font-weight: 600;
+}
+
+/* 
+================================
+Our Cleaner Page Css Start
+================================
+*/
+
+#cleaners {
+  padding: 3% 0;
+  background-color: var(--section-bg);
+}
+
+.cleaner_card {
+  box-shadow: var(--theme-boxShadow);
+  border-radius: var(--theme-borderRadius);
+  margin-top: 80px;
+  transition: all 0.4s ease-in-out;
+}
+
+.cleaner_card:hover {
+  transform: translateY(-20px);
+}
+
+.cleaner_card img {
+  border-radius: var(--theme-borderRadius);
+  height: 300px;
+}
+
+.cc_left p {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--theme-color);
+}
+
+.cc_right p {
+  font-weight: 500;
+  line-height: 160%;
+}
+
+.cc_right span {
+  color: var(--theme-color);
+}
+
+.cleaner_card:nth-child(2) {
+  margin: 80px 0;
+}
+
+/* 
+================================
+Book Now Page Css Start
+================================
+*/
+
+#book-now {
+  background-color: var(--section-bg);
+  padding: 3% 0;
+}
+
+.bnc_right img {
+  border-radius: var(--theme-borderRadius);
+}
+
+.bnc_left {
+  border-radius: var(--theme-borderRadius);
+}
+
+.bnc_left form div {
+  gap: 3px;
+}
+
+.bnc_left form div label {
+  color: var(--theme-bg);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.bnc_left form div input {
+  border: 2px solid var(--theme-bg);
+  font-size: 15px;
+  background-color: transparent;
+  outline: none;
+}
+
+.bnc_left form div select {
+  border: 2px solid var(--theme-bg);
+  font-size: 15px;
+  background-color: transparent;
+  outline: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+#next-form {
+  margin-top: 15px;
+  width: 200px;
+  background-color: var(--theme-bg);
+  color: #fff;
+  text-align: center;
+}
+
+#next-form:hover {
+  background-color: #fff;
+  color: var(--theme-bg);
+}
+
+#user_information {
+  display: none;
+}
+
+#user_information div {
+  margin-top: 20px;
+}
+
+#general_inqueries {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#book-now .btn {
+  background-color: var(--theme-color);
+  color: #fff;
+  border: 1px solid var(--theme-color);
+}
+
+#book-now .btn:hover {
+  background: transparent;
+  color: var(--theme-color);
+  border: 1px solid var(--theme-color);
+}
+
+/* 
+================================
+Confirm Booking Page Css Start
+================================
+*/
+
+#confirm_booking {
+  padding: 3% 0;
+  background-color: var(--section-bg);
+}
+
+.cb_content_container {
+  margin: 80px 0;
+}
+
+.cb_right img {
+  border-radius: var(--theme-borderRadius);
+}
+
+.cb_left {
+  background-color: #fff;
+  padding: 2%;
+  border-radius: var(--theme-borderRadius);
+  box-shadow: var(--theme-boxShadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cb_desc {
+  color: var(--theme-color);
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.bookinginfo_heading {
+  color: var(--theme-color);
+  font-weight: 600;
+}
+
+.booking_details span {
+  color: var(--theme-color);
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+#choosed_service {
+  text-transform: capitalize;
+}

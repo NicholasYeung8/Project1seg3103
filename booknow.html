@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon linkup -->
+    <link rel="shortcut icon" href="./images/car.png" type="image/x-icon" />
+
+    <!-- document title -->
+    <title>Book Now - Finest Car Washing</title>
+
+    <!-- Google fonts linkup -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap Linkup -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <!-- css linkup -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <!-- TopBar -->
+      <div
+        class="topbar bg-white d-flex justify-content-between align-items-center ps-5 pe-5"
+      >
+        <div class="text-start">
+          <p>99 University Drive, Ottawa, K4K0A9</p>
+        </div>
+        <div class="text-center">
+          <p>Open Everyday: 9am-5pm</p>
+        </div>
+        <div class="text-end">
+          <p>Call Us: 613-888-8888</p>
+        </div>
+      </div>
+
+      <!-- navbar -->
+      <div class="navbar ps-5 pe-5">
+        <div
+          class="container-fluid d-flex justify-content-between align-items-center p-0"
+        >
+          <!-- left side -->
+          <div class="nav_left">
+            <span class="logo">
+              <a href="./index.html" class="fs-2"
+                >Finest<span class="text-white">Car</span>Wash</a
+              >
+            </span>
+          </div>
+          <!-- right side -->
+          <div class="nav_right">
+            <ul class="d-flex align-items-center gutter-6">
+              <li class="ms-4">
+                <a
+                  href="./index.html"
+                  class="text-white fw-semibold fs-6 position-relative"
+                  >Home</a
+                >
+              </li>
+              <li class="ms-4">
+                <a
+                  href="./services.html"
+                  class="text-white fw-semibold fs-6 position-relative"
+                  >Services
+                </a>
+              </li>
+              <li class="ms-4">
+                <a
+                  href="./cleaners.html"
+                  class="text-white fw-semibold fs-6 position-relative"
+                  >Our Cleaners</a
+                >
+              </li>
+              <li class="ms-4">
+                <a
+                  href="./business-info.html"
+                  class="text-white fw-semibold fs-6 position-relative"
+                  >Business Info</a
+                >
+              </li>
+              <li class="ms-4">
+                <a
+                  href="#"
+                  class="active-page text-white fw-semibold fs-6 position-relative"
+                  >Book Now</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Section Start -->
+    <section id="book-now">
+      <!-- title -->
+      <div class="section_heading text-center">
+        <h1 class="section_title text-center">Book Now</h1>
+      </div>
+
+      <!-- container start -->
+      <div class="container">
+        <!-- content container start -->
+        <div
+          class="book_now_content_container row d-flex justify-content-between"
+          style="margin: 80px 0"
+        >
+          <!-- left side -->
+          <div class="bnc_left col-md-6 bg-white p-5">
+            <form class="booking-form" onsubmit="submitForm(event)">
+              <!-- General Inqueries -->
+              <div id="general_inqueries">
+                <!-- cleaning date -->
+                <div class="d-flex flex-column">
+                  <label for="date">Cleaning Date (Required)</label>
+                  <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    class="p-2 rounded-2"
+                  />
+                </div>
+
+                <!-- Time -->
+                <div class="d-flex flex-column">
+                  <label for="time"
+                    >Time (Required) Please select between 9am to 5pm*</label
+                  >
+                  <input
+                    type="time"
+                    id="time"
+                    name="time"
+                    class="p-2 rounded-2"
+                  />
+                </div>
+
+                <!-- Cleaner -->
+                <div class="d-flex flex-column">
+                  <label for="cleaner">Cleaner (Required)</label>
+                  <select
+                    id="cleaner"
+                    name="cleaner"
+                    required
+                    class="p-2 rounded-2"
+                  >
+                    <option value="Jhon Smith" selected>John Smith</option>
+                    <option value="Mike Doe">Mike Doe</option>
+                    <option value="Dan Smith">Dan Smith</option>
+                  </select>
+                </div>
+
+                <!-- Service -->
+                <div class="d-flex flex-column">
+                  <label for="service">Service (Required)</label>
+                  <select
+                    id="service"
+                    name="service"
+                    required
+                    class="p-2 rounded-2"
+                  >
+                    <option value="Interior Car Wash" selected>
+                      Interior Car Wash
+                    </option>
+                    <option value="Exterior Car Wash">Exterior Car Wash</option>
+                    <option value="YYY Wash">YYY Wash</option>
+                    <option value="XYZ Wash">XYZ Wash</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- User Information -->
+              <div id="user_information">
+                <!-- Full Name -->
+                <div class="d-flex flex-column">
+                  <label for="name">Full Name (Required)</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="ex: Jhon Doe"
+                    required
+                    class="p-2 rounded-2"
+                  />
+                </div>
+
+                <!-- Phone -->
+                <div class="d-flex flex-column">
+                  <label for="phone">Phone Number (Required)</label>
+                  <input
+                    type="number"
+                    id="phone"
+                    name="phone"
+                    placeholder="ex: +000992938"
+                    required
+                    class="p-2 rounded-2"
+                  />
+                </div>
+
+                <!-- Email -->
+                <div class="d-flex flex-column">
+                  <label for="email">Email (Required)</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="ex: john@business.com"
+                    required
+                    class="p-2 rounded-2"
+                  />
+                </div>
+              </div>
+
+              <!-- Next Page button -->
+              <div
+                class="btn_div d-flex align-items-center justify-content-center mt-4"
+              >
+                <input class="btn" type="button" id="next-form" value="Book" />
+              </div>
+            </form>
+          </div>
+
+          <!-- right side -->
+          <div class="bnc_right col-md-6">
+            <img src="./images/book-now.jpg" alt="book-now" />
+          </div>
+        </div>
+        <!-- content container end -->
+      </div>
+      <!-- container end -->
+    </section>
+    <!-- Section End -->
+
+    <!-- Footer -->
+    <footer>
+      <span class="logo">
+        <a href="./index.html" class="fs-2"
+          >Finest<span class="text-white">Car</span>Wash</a
+        >
+      </span>
+
+      <div
+        class="social_links d-flex justify-content-between align-items-center"
+      >
+        <div
+          class="bg-white me-3 d-flex justify-content-center rounded-circle align-items-center w-full"
+        >
+          <a href="#">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </div>
+
+        <div
+          class="bg-white me-3 d-flex justify-content-center rounded-circle align-items-center w-full"
+        >
+          <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+
+        <div
+          class="bg-white me-3 d-flex justify-content-center rounded-circle align-items-center w-full"
+        >
+          <a href="#">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+
+      <p class="text-white">&copy; 2023, Finest Car Wash All right reserved.</p>
+    </footer>
+
+    <!-- Js file linkup -->
+    <script src="./js/app.js"></script>
+    <!-- Sweet Alert CDN Link -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Bootstrap JS -->
+    <script src="./js/bootstrap.min.js"></script>
+  </body>
+</html>
